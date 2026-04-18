@@ -1,6 +1,6 @@
 FROM postgres:18-alpine
 
-RUN apk add --no-cache pgbackrest ca-certificates curl tzdata \
+RUN apk add --no-cache pgbackrest ca-certificates curl musl-locales tzdata \
   && mkdir -p /var/log/pgbackrest /var/lib/pgbackrest /var/spool/pgbackrest \
   && chown -R postgres:postgres /var/log/pgbackrest /var/lib/pgbackrest /var/spool/pgbackrest
 
