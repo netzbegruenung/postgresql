@@ -34,7 +34,7 @@ jobs:
         with:
           registry: ${{ env.REGISTRY }}
           username: ${{ github.actor }}
-          password: ${{ secrets.PACKAGES_WRITE_TOKEN }}
+          password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Derive base image tag and build date
         id: vars
